@@ -29,6 +29,7 @@ jobs:
         run: |
           cd check_process
           sudo apt-get update
+          sudo apt-get install -y pandoc python3-sphinx jupyter
           pip3 install -r requirements.txt
 
       # Runs a single command using the runners shell
