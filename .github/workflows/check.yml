@@ -24,13 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - name: Install packages needed for the checks
         run: |
           cd check_process
           sudo apt-get update
           sudo apt-get install -y pandoc python3-sphinx jupyter
-          pip3 install -r requirements.txt
+          pip3 install pandas
 
       # Runs a single command using the runners shell
       - name: Run add_new_contrib.py
