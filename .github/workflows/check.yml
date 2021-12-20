@@ -28,6 +28,7 @@ jobs:
       - name: Install packages needed for the checks
         run: |
           cd check_process
+          sudo apt-get update
           pip3 install -r requirements.txt
 
       # Runs a single command using the runners shell
