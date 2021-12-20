@@ -34,4 +34,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run add_new_contrib.py
-        run: python3 add_new_contrib.py -csv CAGS\ contribution.csv
+        run: |
+          cd check_process
+          python3 add_new_contrib.py -csv CAGS\ contribution.csv
