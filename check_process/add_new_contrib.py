@@ -68,7 +68,7 @@ def process(verbose,console, style,**kargs):
     db_name = args.db 
 
 
-    db = pd.read_csv('db.csv')
+    db = pd.read_csv(db_name)
     console.print(db.head())
 
     #save a backup with date flag
