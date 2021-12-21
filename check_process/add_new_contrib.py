@@ -69,9 +69,10 @@ def process(verbose,console, style,**kargs):
 
 
     db = pd.read_csv(db_name)
-    console.print(db.head())
+    console.print('db before update', style=style)
+    console.print(db[-3:])
 
-    #save a backup with date flag
+    console.print('save a backup with date flag', style=style)
     today = date.today()
     console.print("Today's date:", today, style=style)
 
@@ -131,7 +132,9 @@ def add_to_db(db,new,db_name,console,style):
 
     new['id']=db['id'].max()+1
     db = db.append(new)
-    print(db[-3:])
+
+    console.print('db after update', style=style)
+    console.print(db[-3:])
 
     db.to_csv(db_name,sep=',',index=False)
 
